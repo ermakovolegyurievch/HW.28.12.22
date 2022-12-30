@@ -48,10 +48,12 @@ public class Main {
         int day = 1;
         if (deliveryDistance < 20) {
             System.out.println("Потребуется день:" + day);
-        } else if (deliveryDistance >= 20 && deliveryDistance < 60) {
-            System.out.println("Потребуется дня:" + (1 + day));
-        } else if (deliveryDistance >= 60 && deliveryDistance <= 100) {
-            System.out.println("Потребуется дня:" + (2 + day));
+        }
+        if (deliveryDistance >= 20 && deliveryDistance < 60) {
+            System.out.println("Потребуется дня:" + (day + 1));
+        }
+        if (deliveryDistance >= 60 && deliveryDistance <= 100) {
+            System.out.println("Потребуется дня:" + (day + 2));
         } else {
             System.out.println("Доставки нет.");
         }
@@ -61,41 +63,25 @@ public class Main {
         System.out.println("Задача 5");
         int monthNumber = 12;
         switch (monthNumber) {
+            case 12:
             case 1:
-                System.out.println("Зима");
-                break;
             case 2:
                 System.out.println("Зима");
                 break;
             case 3:
-                System.out.println("Весна");
-                break;
             case 4:
-                System.out.println("Весна");
-                break;
             case 5:
                 System.out.println("Весна");
                 break;
             case 6:
-                System.out.println("Лето");
-                break;
             case 7:
-                System.out.println("Лето");
-                break;
             case 8:
                 System.out.println("Лето");
                 break;
             case 9:
-                System.out.println("Осень");
-                break;
             case 10:
-                System.out.println("Осень");
-                break;
             case 11:
                 System.out.println("Осень");
-                break;
-            case 12:
-                System.out.println("Зима");
                 break;
             default:
                 System.out.println("Такого месяца нет");
